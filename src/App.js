@@ -25,10 +25,17 @@ const App = () => {
   };
 
   // Create coins variable and set to empty array
-  const [coins, updateCoins] = useState([])
+  const [coins, updateCoins] = useState([]);
+
+  const [loading, setloading] = useState(true);
+
+ 
 
   // Define function to all API
   const fetchCoins = async () => {
+
+    setloading(true);
+
     const { limit, start } = input
     const data = await API.get(
       'cryptoapi'
@@ -36,7 +43,10 @@ const App = () => {
       );
 
     updateCoins(data.coins);
-  }
+
+    setloading(false);
+
+  };
 
   // Call fetchCoins function when component loads
   useEffect(
@@ -49,37 +59,44 @@ const App = () => {
   return (
     <div className="App">
 
-      <input
-        onChange={e => updateInputValues('limit', e.target.value)}
-        placeholder="Enter a limit"
-      />
+      {loading && <h2>Loading...</h2>}
 
-      <input
-        placeholder="Enter a starting value"
-        onChange={e => updateInputValues('start', e.target.value)}
-      />
+    {!loading && <div>
+        <input
+          onChange={e => updateInputValues('limit', e.target.value)}
+          placeholder="Enter a limit"
+        />
+
+        <input
+          placeholder="Enter a starting value"
+          onChange={e => updateInputValues('start', e.target.value)}
+        />
 
 
-<button 
-onClick={fetchCoins}
->
-  Fetch Coins
-  </button>
-      
-      {
-        coins.map((coin) => (
-          <div
-           key={coin.name}
-           >
-            <h2>
-              {coin.name} - {coin.symbol}
-              </h2>
-            <h5>
-              ${coin.price_usd}
-              </h5>
-          </div>
-        ))
-      }
+        <button 
+        onClick={fetchCoins}
+        >
+          Fetch Coins
+          </button>
+              
+              {
+                coins.map((coin) => (
+                  <div
+                  key={coin.name}
+                  >
+                    <h2>
+                      {coin.name} - {coin.symbol}
+                      </h2>
+                    <h5>
+                      ${coin.price_usd}
+                      </h5>
+                  </div>
+                ))
+              }
+
+
+    </div>
+}
     </div>
   );
 }
