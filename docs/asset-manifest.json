@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/https//aleebit/github.io/amplify-react-app/static/css/main.073c9b0a.css",
-    "main.js": "/https//aleebit/github.io/amplify-react-app/static/js/main.e096ac74.js",
-    "static/js/787.179bae72.chunk.js": "/https//aleebit/github.io/amplify-react-app/static/js/787.179bae72.chunk.js",
-    "index.html": "/https//aleebit/github.io/amplify-react-app/index.html",
-    "main.073c9b0a.css.map": "/https//aleebit/github.io/amplify-react-app/static/css/main.073c9b0a.css.map",
-    "main.e096ac74.js.map": "/https//aleebit/github.io/amplify-react-app/static/js/main.e096ac74.js.map",
-    "787.179bae72.chunk.js.map": "/https//aleebit/github.io/amplify-react-app/static/js/787.179bae72.chunk.js.map"
+    "main.css": "/github.io/amplify-react-app/static/css/main.073c9b0a.css",
+    "main.js": "/github.io/amplify-react-app/static/js/main.134f33f3.js",
+    "static/js/787.179bae72.chunk.js": "/github.io/amplify-react-app/static/js/787.179bae72.chunk.js",
+    "index.html": "/github.io/amplify-react-app/index.html",
+    "main.073c9b0a.css.map": "/github.io/amplify-react-app/static/css/main.073c9b0a.css.map",
+    "main.134f33f3.js.map": "/github.io/amplify-react-app/static/js/main.134f33f3.js.map",
+    "787.179bae72.chunk.js.map": "/github.io/amplify-react-app/static/js/787.179bae72.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.e096ac74.js"
+    "static/js/main.134f33f3.js"
   ]
 }
