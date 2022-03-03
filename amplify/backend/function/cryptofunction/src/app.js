@@ -63,22 +63,20 @@ app.get(
 app.get(
   "/born"
   , async (req, res) => {
-
-    try {
+    try{
       const data = await axios.get("https://api.github.com/users/aleebit");
       res.json({
         bornOnInfo: data.data
-      })
+      });
     }
-
-    catch (err) {
+    catch(err){
       res.json({
-        error: err
-      })
+        error:err
+      });
     }
-    const data = await axios.get();
+ 
   }
-  );
+);
 
 app.get('/item', function(req, res) {
   // Add your code here
